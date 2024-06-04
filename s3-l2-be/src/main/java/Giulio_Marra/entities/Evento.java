@@ -4,7 +4,7 @@ package Giulio_Marra.entities;
 import Giulio_Marra.enums.TipoEvento;
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "eventi")
@@ -17,7 +17,7 @@ public class Evento {
     @Column(name = "titolo")
     private String titoloEventp;
     @Column(name = "data_evento")
-    private Date dataEevento;
+    private LocalDate dataEevento;
     @Column(name = "descrizione")
     private String descrizioneEvento;
     @Column(name = "tipo_evento")
@@ -28,7 +28,7 @@ public class Evento {
 
     }
 
-    public Evento(String titoloEventp, Date dataEevento, String descrizioneEvento, TipoEvento tipoevento) {
+    public Evento(String titoloEventp, LocalDate dataEevento, String descrizioneEvento, TipoEvento tipoevento) {
         this.titoloEventp = titoloEventp;
         this.dataEevento = dataEevento;
         this.descrizioneEvento = descrizioneEvento;
@@ -47,11 +47,11 @@ public class Evento {
         this.titoloEventp = titoloEventp;
     }
 
-    public Date getDataEevento() {
+    public LocalDate getDataEevento() {
         return dataEevento;
     }
 
-    public void setDataEevento(Date dataEevento) {
+    public void setDataEevento(LocalDate dataEevento) {
         this.dataEevento = dataEevento;
     }
 
